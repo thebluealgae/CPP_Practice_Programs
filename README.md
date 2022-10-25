@@ -1,4 +1,4 @@
-# English Declairation
+# English Declaration
 This is the repo where I will commit my codes and programs! No releases here!
 
 Please notice: Only when Microsoft Visual C++ Redistributable is installed on your computer can you normally run programs here!
