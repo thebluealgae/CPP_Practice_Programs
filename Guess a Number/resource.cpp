@@ -3,9 +3,9 @@
 
 int main()
 {
-	int leftNumber = 0, rightNumber = 0, guessNumber = 0;	//åˆå§‹åŒ–è¿™å‡ ä¸ªå€¼ã€‚æ³¨æ„å¿…é¡»è¦å¯¹å˜é‡è¿›è¡Œåˆå§‹åŒ–æ“ä½œï¼Œå¦åˆ™å¯èƒ½ä¼šå¯¼è‡´ä¸€äº›å¥‡å¥‡æ€ªæ€ªçš„é—®é¢˜ï¼
+	int leftNumber = 0, rightNumber = 0, guessNumber = 0;	//³õÊ¼»¯Õâ¼¸¸öÖµ¡£×¢Òâ±ØĞëÒª¶Ô±äÁ¿½øĞĞ³õÊ¼»¯²Ù×÷£¬·ñÔò¿ÉÄÜ»áµ¼ÖÂÒ»Ğ©ÆæÆæ¹Ö¹ÖµÄÎÊÌâ£¡
 
-	std::cout << "Please enter two numbers that will be used to construct an interval:" << std::endl;	//è§„å®šä¸€ä¸ªåŒºé—´ã€‚æ­£ç¡®ç­”æ¡ˆå°†ä»ä½ ç»™å®šçš„åŒºé—´ä¸­éšæœºæŒ‡å®šã€‚
+	std::cout << "Please enter two numbers that will be used to construct an interval:" << std::endl;	//¹æ¶¨Ò»¸öÇø¼ä¡£ÕıÈ·´ğ°¸½«´ÓÄã¸ø¶¨µÄÇø¼äÖĞËæ»úÖ¸¶¨¡£
 	std::cin >> leftNumber >> rightNumber;
 
 	if (leftNumber < rightNumber)
@@ -14,12 +14,12 @@ int main()
 		std::default_random_engine e(rd());
 		std::uniform_int_distribution<int> u(leftNumber, rightNumber);
 		int answer = u(e);
-		//ä¸Šé¢å››è¡Œæ˜¯ç”¨æ¥å«äºç”¨æˆ·è§„å®šçš„åŒºé—´çš„éšæœºç­”æ¡ˆçš„ã€‚
+		//ÉÏÃæËÄĞĞÊÇÓÃÀ´º¬ÓÚÓÃ»§¹æ¶¨µÄÇø¼äµÄËæ»ú´ğ°¸µÄ¡£
 
 		std::cout << "Please guess a number!" << std::endl;
 		std::cin >> guessNumber;
 
-		while (guessNumber != answer)	//é™¤éä½ çŒœå¯¹äº†ï¼Œå¦åˆ™è¿™ä¸ªå¾ªç¯ä¼šä¸€ç›´è®©ä½ çŒœæ­£ç¡®ç­”æ¡ˆçš„ã€‚
+		while (guessNumber != answer)	//³ı·ÇÄã²Â¶ÔÁË£¬·ñÔòÕâ¸öÑ­»·»áÒ»Ö±ÈÃÄã²ÂÕıÈ·´ğ°¸µÄ¡£
 		{
 			std::cout << "Incorrect number lol! Guess it again!" << std::endl;
 			if (guessNumber > leftNumber && guessNumber < answer)
@@ -42,7 +42,7 @@ int main()
 			std::cin >> guessNumber;
 		}
 
-		if (guessNumber == answer)	//å½“ä½ çŒœå¯¹ç­”æ¡ˆæ—¶ï¼Œæ‰§è¡Œè¯¥ä»£ç ã€‚
+		if (guessNumber == answer)	//µ±Äã²Â¶Ô´ğ°¸Ê±£¬Ö´ĞĞ¸Ã´úÂë¡£
 		{
 			std::cout << "Good job! You got the correct answer!";
 		}
@@ -54,7 +54,7 @@ int main()
 
 	else
 	{
-		std::cerr << "Please enter both of the two numbers and make sure that the first number is smaller than the second number!";	//å¦‚æœä½ è¾“å…¥çš„æ•°å­—ä¸ç¬¦åˆåŒºé—´çš„å®šä¹‰ï¼Œé‚£ä¹ˆæ‰§è¡Œè¯¥ä»£ç ã€‚
+		std::cerr << "Please enter both of the two numbers and make sure that the first number is smaller than the second number!";	//Èç¹ûÄãÊäÈëµÄÊı×Ö²»·ûºÏÇø¼äµÄ¶¨Òå£¬ÄÇÃ´Ö´ĞĞ¸Ã´úÂë¡£
 
 		std::cin.get();
 		std::cin.get();
